@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -9,22 +9,50 @@
   <meta name="author" content="Crazould">
   <title>Thariq Dev</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
+  <link href="http://fonts.cdnfonts.com/css/futura-md-bt" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline text-clifford">
-    Hello world!
-  </h1>
-</body>
 
+<body class="min-h-fullscreen bg-zinc-900">
+  <div class="wrapper p-5 flex justify-center flex-wrap">
+    <div class="profile-intro max-w-3xl flex-column-center">
+      <div class="profile-intro-desc">
+        <div class="profile-job  text-blue-600 text-3xl text-center">
+          <span>FRONTEND ENGINEER</span>
+        </div>
+        <div class=" profile-pic-container bg-blue-600 max-w-sm flex justify-center rounded-full relative">
+          <div class="text-white text-3xl text-center absolute">
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+            <span>FRONTEND ENGINEER</span>
+          </div>
+          <img src="./assets/profile-pic.png" alt="profile picture" class="z-10">
+        </div>
+        <div class="profile-name bg-blue-600 text-zinc-100 text-2xl p-1 text-center">
+          Muhammad At Thariq Filardi
+        </div>
+      </div>
+      <div class="profile-social">
+
+      </div>
+    </div>
+    <div class="profile-desc max-w-3xl flex-column-center">
+      <div class="text-white">
+        <ul>
+          <li>EDUCATION</li>
+          <li>JOB EXPERIENCE</li>
+          <li>ACHIEVEMENT</li>
+          <li>INTEREST</li>
+          <li>PROJECTS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+  </script>
+</body>
 </html>

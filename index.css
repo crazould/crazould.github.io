@@ -1,0 +1,25 @@
+body {
+  /* font-family: 'Futura Md BT', sans-serif;
+  font-family: 'FuturaBlack BT', sans-serif;
+  font-family: 'Futura BdCn BT', sans-serif;
+  font-family: 'Futura Hv BT', sans-serif;
+  font-family: 'Futura Lt BT', sans-serif;
+  font-family: 'Futura LtCn BT', sans-serif;
+  font-family: 'Futura MdCn BT', sans-serif;
+  font-family: 'Futura Bk BT', sans-serif;
+  font-family: 'Futura XBlk BT', sans-serif;
+  font-family: 'Futura XBlkCn BT', sans-serif;
+  font-family: 'Futura XBlkIt BT', sans-serif; */
+  font-family: 'Futura XBlkCnIt BT', sans-serif;
+  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 6px);
+  background-size: 4px 4px;
+  user-select: none;
+}
+
+.flex-column-center{
+  @apply flex flex-column justify-center;
+}
+
+.flex-row-center{
+  @apply flex justify-center;
+}
