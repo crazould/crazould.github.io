@@ -2,26 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-.body {
-  font-family: 'Futura XBlkCnIt BT', sans-serif;
-  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 6px);
-  background-size: 4px 4px;
-  user-select: none;
+
+:root{
+  --primary-color: #2563eb;
+  --secondary-color: #18181b;
+  --accent-color: #fafafa;
 }
 
-.text-bg, .profile-name{
+.body {
+  font-family: 'Futura XBlkCnIt BT', sans-serif;
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
+  background-size: 4px 4px;
+  user-select: none;
+  @apply min-h-screen bg-zinc-900;
+}
+
+.wrapper {
+  @apply p-5 flex justify-center flex-wrap;
+}
+
+.profile-intro {
+  @apply p-2 mb-5 text-blue-600;
+}
+
+.profile-intro-desc{
+  @apply flex flex-col items-center mb-3 md:mb-5 relative w-[280px] md:w-[400px];
+}
+
+.profile-job-out{
+  @apply text-3xl -skew-y-6 md:text-[2rem] text-center absolute;
+}
+
+.profile-pic-container{
+ @apply bg-blue-600 w-[280px] md:w-[400px] rounded-full relative overflow-hidden; 
+}
+
+.profile-job-in{
+  @apply text-bg text-3xl -skew-y-6 md:text-[2rem] w-[280px] md:w-[400px] text-center absolute z-10;
+}
+
+.profile-pic{
+  @apply z-50 relative w-full;
+}
+
+.profile-name {
+  @apply text-2xl -skew-y-6 md:text-4xl border-b-2 hover:border-blue-600 text-center z-20 relative duration-200;
+}
+
+.text-bg,
+.profile-name {
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px #fafafa;
 }
 
-.profile-name:hover{
+.profile-name:hover {
   -webkit-text-stroke: 1px #2563eb;
 }
 
-i:hover{
-  cursor: pointer;
+.profile-social{
+  @apply -skew-y-6 flex justify-evenly text-4xl md:text-5xl;
 }
 
-.profile-pic:hover{
-  
+i {
+  @apply hover:text-zinc-100 duration-200 hover:cursor-pointer;
 }
+
+
+.profile-desc {
+  @apply flex flex-col items-center text-zinc-100;
+}
+
