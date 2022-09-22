@@ -1,0 +1,19 @@
+{
+  "name": "crazould.github.io",
+  "version": "1.0.0",
+  "description": "web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazould/crazould.github.io.git"
+  },
+  "author": "crazould",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazould/crazould.github.io/issues"
+  },
+  "homepage": "https://github.com/crazould/crazould.github.io#readme"
+}

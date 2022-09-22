@@ -5,11 +5,20 @@ body {
   user-select: none;
 }
 
-.text-bg{
+.text-bg, .profile-name{
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px #fafafa;
+}
+
+.profile-name:hover{
+  -webkit-text-stroke: 1px #2563eb;
 }
 
 i:hover{
   cursor: pointer;
 }
+
+.profile-pic:hover{
+  
+}
+
