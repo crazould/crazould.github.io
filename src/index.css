@@ -5,7 +5,7 @@
 :root{
   --primary-color: #2563eb;
   --secondary-color: #18181b;
-  --accent-color: #fafafa;
+  --accent-color: #f4f4f5;
 }
 
 .body {
@@ -13,21 +13,20 @@
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
   background-size: 4px 4px;
   user-select: none;
-  @apply min-h-screen bg-zinc-900;
+  @apply min-h-screen bg-zinc-900 flex justify-center items-center py-10;
 }
 
 .wrapper {
-  @apply p-5 flex justify-center flex-wrap;
+  @apply flex justify-center flex-wrap;
 }
 
 .profile-intro {
-  @apply p-2 mb-5 text-blue-600;
+  @apply p-2 mb-10 text-blue-600;
 }
 
 .profile-intro-desc{
   @apply flex flex-col items-center mb-3 md:mb-5 relative w-[280px] md:w-[400px];
 }
-
 
 .profile-job-out{
   @apply text-3xl -skew-y-6 md:text-[2.5rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden;
@@ -61,8 +60,13 @@ i {
 }
 
 .profile-desc {
-  @apply flex flex-col items-center text-zinc-100;
+  @apply  text-zinc-100 border-y-2 flex flex-wrap justify-center skew-y-6 p-3;
 }
 
-
+.desc-item{
+  @apply bg-blue-600 m-2 py-4 px-2 text-xl skew-y-3 md:text-4xl;
+  font-family: 'Futura XBlk BT', sans-serif;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
 

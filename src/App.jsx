@@ -44,16 +44,14 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="profile-desc">
-          <ul>
-            <li>EDUCATION</li>
-            <li>JOB EXPERIENCE</li>
-            <li>SKILLS</li>
-            <li>ACHIEVEMENT</li>
-            <li>CERTIFICATE</li>
-            <li>PROJECTS</li>
-          </ul>
-        </div> 
+        <ul className="profile-desc">
+          <li className='desc-item'>EDUCATION</li>
+          <li className='desc-item'>JOB EXPERIENCE</li>
+          <li className='desc-item'>SKILLS</li>
+          <li className='desc-item'>ACHIEVEMENT</li>
+          <li className='desc-item'>CERTIFICATE</li>
+          <li className='desc-item'>PROJECTS</li>
+        </ul>
       </div>
     </div>
   )
