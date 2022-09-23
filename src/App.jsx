@@ -1,7 +1,18 @@
 import profilePic from './assets/profile-pic.png'
+import profilePicShine from './assets/profile-pic-shine.png'
 import './index.css'
+import { useState } from 'react'
+
+const profileJobTxt = 'FRONTEND DEVELOPER '
+const totalProfileJobTxt = 10
+let arr = []
+for (let index = 0; index < totalProfileJobTxt; index++) {
+  arr = [...arr, profileJobTxt]
+}
 
 function App() {
+
+  const [isHoverPic, setHoverPic] = useState(false);
 
   return (
     <div className="body">
@@ -9,25 +20,13 @@ function App() {
         <div className="profile-intro">
           <div className="profile-intro-desc">
             <div className="profile-job-out">
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
-              FRONTEND DEVELOPER
+                {arr}
             </div>
             <div className="profile-pic-container">
               <div className="profile-job-in">
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
-                FRONTEND DEVELOPER
+                {arr}
               </div>
-              <img src={profilePic} alt="profile picture" className="profile-pic" />
+              <img src={isHoverPic ? profilePicShine:profilePic} alt="profile picture" className="profile-pic" onMouseEnter={()=> setHoverPic(true)} onMouseOut={()=> setHoverPic(false)} />
             </div>
             <div className="profile-name">
                 Muhammad At Thariq Filardi
@@ -46,39 +45,14 @@ function App() {
           </div>
         </div>
         <div className="profile-desc">
-          <div className="">
-            <ul>
-              <li>
-                EDUCATION
-                <ul>
-                  <li>Bina Nusantara University</li>
-                </ul>
-              </li>
-              <li>JOB EXPERIENCE
-                <ul>
-                  <li>Teaching Assistant</li>
-                  <li>Frontend Engineer Intern</li>
-                  <li>Frontend Engineer</li>
-                </ul>
-              </li>
-              <li>
-                SKILLS
-                <ul>
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>NextJs</li>
-                  <li>Vue</li>
-                  <li>NuxtJs</li>
-                  <li>Vuetify</li>
-                  <li>Git</li>
-                  <li>Github</li>
-                </ul>
-              </li>
-              <li>ACHIEVEMENT</li>
-              <li>CERTIFICATE</li>
-              <li>PROJECTS</li>
-            </ul>
-          </div>
+          <ul>
+            <li>EDUCATION</li>
+            <li>JOB EXPERIENCE</li>
+            <li>SKILLS</li>
+            <li>ACHIEVEMENT</li>
+            <li>CERTIFICATE</li>
+            <li>PROJECTS</li>
+          </ul>
         </div> 
       </div>
     </div>
