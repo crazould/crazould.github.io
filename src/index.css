@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --primary-color: #2563eb;
   --secondary-color: #18181b;
   --accent-color: #f4f4f5;
@@ -13,7 +13,7 @@
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
   background-size: 4px 4px;
   user-select: none;
-  @apply min-h-screen bg-zinc-900 flex justify-center items-center py-10;
+  @apply min-h-screen bg-zinc-900 flex justify-center items-center py-16 overflow-x-hidden;
 }
 
 .wrapper {
@@ -21,52 +21,178 @@
 }
 
 .profile-intro {
-  @apply p-2 mb-10 text-blue-600;
+  @apply p-2 mb-3 text-blue-600;
 }
 
-.profile-intro-desc{
+.profile-intro-desc {
   @apply flex flex-col items-center mb-3 md:mb-5 relative w-[280px] md:w-[400px];
 }
 
-.profile-job-out{
+.profile-job-out {
   @apply text-3xl -skew-y-6 md:text-[2.5rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden;
 }
 
-.profile-pic-container{
- @apply bg-blue-600 w-[280px] md:w-[400px] rounded-full relative overflow-hidden; 
+.profile-pic-container {
+  @apply bg-blue-600 w-[280px] md:w-[400px] rounded-full relative overflow-hidden;
 }
 
-.profile-job-in{
+.profile-job-in {
   @apply text-3xl -skew-y-6 md:text-[2.5rem] w-[280px] md:w-[400px] text-center absolute z-10;
   color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px #fafafa;
+  -webkit-text-stroke: 1px #f4f4f5;
 }
 
-.profile-pic{
+.profile-pic {
   @apply z-50 relative w-full;
 }
 
 .profile-name {
-  @apply text-2xl md:text-4xl text-center z-20 relative text-zinc-100 bg-blue-600
-  p-2 duration-200;
+  @apply text-2xl md:text-4xl text-center z-20 relative text-zinc-100 bg-blue-600 -skew-y-6;
 }
 
-.profile-social{
-  @apply flex justify-evenly text-4xl md:text-5xl;
+.profile-social {
+  @apply flex justify-evenly text-4xl md:text-5xl -skew-y-6;
 }
 
 i {
   @apply hover:text-zinc-100 duration-200 hover:cursor-pointer;
 }
 
+.profile-desc-wrapper {
+  @apply text-zinc-100 -skew-y-6;
+}
+
+.profile-desc-header {
+  @apply text-2xl md:text-4xl text-center text-zinc-100 bg-blue-600 hover:cursor-pointer duration-200 active:bg-blue-500;
+}
+
 .profile-desc {
-  @apply  text-zinc-100 border-y-2 flex flex-wrap justify-center skew-y-6 p-3;
+  @apply border-y-2 flex flex-row-reverse flex-wrap justify-around py-2 ;
 }
 
-.desc-item{
-  @apply bg-blue-600 m-2 py-4 px-2 text-xl skew-y-3 md:text-4xl;
+.desc-item {
+  @apply bg-blue-600 m-1 p-1 py-2 text-2xl -skew-y-3 md:text-3xl hover:scale-110 hover:cursor-pointer duration-200 active:bg-blue-500 relative;
   font-family: 'Futura XBlk BT', sans-serif;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  /* font-family: 'Futura Md BT', sans-serif; */
+  font-family: 'FuturaBlack BT', sans-serif;
+  font-family: 'Futura MdCn BT', sans-serif;
+  font-family: 'Futura XBlkCnIt BT', sans-serif;
+  font-family: 'Futura XBlkIt BT', sans-serif;
+  font-family: 'Futura XBlkCn BT', sans-serif;
+  -webkit-text-stroke: 1px #18181b;
+  writing-mode: vertical-lr;
+  text-orientation: upright; 
+  letter-spacing: -5px;
 }
 
+@keyframes show-desc-5 {
+  100% {
+    transform: translate(0%);
+  }
+}
+
+@keyframes show-desc-4 {
+  100% {
+    transform: translate(-120%);
+  }
+}
+
+@keyframes show-desc-3 {
+  100% {
+    transform: translate(-235%);
+  }
+}
+
+@keyframes show-desc-2 {
+  100% {
+    transform: translate(-350%);
+  }
+}
+
+@keyframes show-desc-1 {
+  100% {
+    transform: translate(-465%);
+  }
+}
+
+@keyframes show-desc-0 {
+  100% {
+    transform: translate(-580%);
+  }
+}
+
+.active {
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+  animation-delay: 200ms;
+}
+
+.item-5 {
+  animation-name: show-desc-5;
+}
+
+.item-4 {
+  animation-name: show-desc-4;
+}
+
+.item-3 {
+  animation-name: show-desc-3;
+}
+
+.item-2 {
+  animation-name: show-desc-2;
+}
+
+.item-1 {
+  animation-name: show-desc-1;
+}
+
+.item-0 {
+  animation-name: show-desc-0;
+}
+
+@keyframes disable-desc {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.disable {
+  animation-name: disable-desc;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.desc-item .content{
+  display: none;
+  position: absolute;
+  letter-spacing: normal;
+}
+
+@keyframes content-anim {
+  100%{
+    opacity: 1;
+  }
+}
+
+.desc-item.active .content{
+  display: block;
+  opacity: 0;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  @apply ml-3 text-sm;
+  font-family: 'Futura Md BT', sans-serif;
+
+  animation-name: content-anim;
+  animation-duration: .5s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
