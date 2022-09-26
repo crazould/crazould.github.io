@@ -203,6 +203,11 @@ i {
   @apply text-xs text-zinc-100;
 }
 
+.content .content-link{
+  font-family: 'Futura Lt BT', sans-serif;
+  @apply text-xs text-blue-600;
+}
+
 .content .content-info{
   @apply text-sm;
 }
