@@ -67,22 +67,16 @@ i {
 }
 
 .profile-desc {
-  @apply border-y-2 flex flex-row-reverse flex-wrap justify-around py-2 ;
+  @apply border-y-2 flex flex-row-reverse flex-wrap justify-between py-2;
 }
 
 .desc-item {
   @apply bg-blue-600 m-1 p-1 py-2 text-2xl -skew-y-3 md:text-3xl hover:scale-110 hover:cursor-pointer duration-200 active:bg-blue-500 relative;
-  font-family: 'Futura XBlk BT', sans-serif;
-  /* font-family: 'Futura Md BT', sans-serif; */
-  font-family: 'FuturaBlack BT', sans-serif;
-  font-family: 'Futura MdCn BT', sans-serif;
-  font-family: 'Futura XBlkCnIt BT', sans-serif;
-  font-family: 'Futura XBlkIt BT', sans-serif;
   font-family: 'Futura XBlkCn BT', sans-serif;
-  -webkit-text-stroke: 1px #18181b;
+  -webkit-text-stroke: .5px #18181b;
   writing-mode: vertical-lr;
   text-orientation: upright; 
-  letter-spacing: -5px;
+  letter-spacing: -8px;
 }
 
 @keyframes show-desc-5 {
@@ -122,7 +116,7 @@ i {
 }
 
 .active {
-  animation-duration: 1000ms;
+  animation-duration: 600ms;
   animation-fill-mode: forwards;
   animation-delay: 200ms;
 }
@@ -185,14 +179,34 @@ i {
   opacity: 0;
   writing-mode: horizontal-tb;
   text-orientation: mixed;
+  width: 230px;
 
   background-color: var(--accent-color);
   color: var(--secondary-color);
-  @apply ml-3 text-sm;
-  font-family: 'Futura Md BT', sans-serif;
+  @apply ml-2 text-base p-2;
+  top: 0;
+
+  font-family: 'Futura Lt BT', sans-serif;
 
   animation-name: content-anim;
   animation-duration: .5s;
-  animation-delay: 1.2s;
+  animation-delay: .8s;
   animation-fill-mode: forwards;
 }
+
+.content-item{
+  @apply mb-3;
+}
+
+.content .content-title{
+  font-weight: 900;
+}
+
+.content .content-date{
+  @apply text-sm italic text-zinc-100;
+}
+
+.content .content-info{
+  @apply text-sm;
+}
+

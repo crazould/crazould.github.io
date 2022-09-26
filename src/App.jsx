@@ -3,7 +3,21 @@ import profilePicShine from "./assets/profile-pic-shine.png";
 import "./index.css";
 import { useState } from "react";
 
-const DescItem = ({ title, currIdx, viewIdx, setViewIdx }) => {
+// const DescContent = ({content}) => {
+//   return
+// }
+
+const DescItem = ({ title, content, currIdx, viewIdx, setViewIdx }) => {
+  const DescContent = content.map(({ name, date, link, desc }) => {
+    return (
+      <li className="content-item">
+        <div className="content-title">{name}</div>
+        <div className="content-date">{date}</div>
+        <div className="content-info">{desc}</div>
+      </li>
+    );
+  });
+
   return (
     <li
       className={
@@ -19,11 +33,7 @@ const DescItem = ({ title, currIdx, viewIdx, setViewIdx }) => {
       }}
     >
       {title}
-      <ul className="content">
-        <li>asdfasdf</li>
-        <li>asdfasdf</li>
-        <li>asdfasdf</li>
-      </ul>
+      <ul className="content">{DescContent}</ul>
     </li>
   );
 };
@@ -41,18 +51,79 @@ function App() {
   const [viewIdx, setViewIdx] = useState(-1);
 
   const profileDescTxt = [
-    "EDUCATION",
-    "WORK EXPERIENCE",
-    "SKILLS",
-    "ACHIEVEMENT",
-    "CERTIFICATE",
-    "PROJECTS",
+    {
+      title: "EDUCATION",
+      content: [
+        {
+          name: "Bina Nusantara University",
+          date: "2018-2022",
+          desc: "Computer Science",
+        },
+      ],
+    },
+    {
+      title: "WORK EXPERIENCE",
+      content: [
+        {
+          name: "Teaching Assistant",
+          date: "Software Laboratory Center",
+          desc: "Feb 2019 - Mar 2022",
+        },
+        {
+          name: "Frontend Engineer Intern",
+          date: "LINE Corp",
+          desc: "Des 2021 - Mar 2022",
+        },
+        {
+          name: "Frontend Engineer",
+          date: "LINE Corp",
+          desc: "Mar 2022 - Jun 2022",
+        },
+      ],
+    },
+    {
+      title: "SKILLS",
+      content: [
+        { name: "Basic Web", date: "", desc: "HTML5, CSS3, Javascript" },
+        {
+          name: "Framework/Library",
+          date: "",
+          desc: "React, Gatsby, NextJs, Vue, Nuxt, Vuetify, Bootstrap, Tailwind, Jquery",
+        },
+        { name: "Others", date: "", desc: "Firebase, MySQL, Laravel" },
+      ],
+    },
+    {
+      title: "ACHIEVEMENT",
+      content: [
+        { name: "Best Assistant", date: "" },
+        { name: "Best Assistant", date: "" },
+        { name: "Best Assistant", date: "" },
+      ],
+    },
+    {
+      title: "CERTIFICATE",
+      content: [
+        { name: "Javascript", date: "", desc: "" },
+        { name: "React", date: "", desc: "" },
+        { name: "Vue", date: "", desc: "" },
+      ],
+    },
+    {
+      title: "PROJECTS",
+      content: [
+        { name: "Anemone7", link: "", desc: "Todos app with vanilla js" },
+        { name: "Xtream Chaser", link: "", desc: "Game app landing page" },
+        { name: "Covidia", link: "", desc: "Covid19 web information" },
+      ],
+    },
   ];
 
-  const DescItems = profileDescTxt.map((title, index) => {
+  const DescItems = profileDescTxt.map(({ title, content }, index) => {
     return (
       <DescItem
         title={title}
+        content={content}
         key={index}
         currIdx={index}
         viewIdx={viewIdx}
