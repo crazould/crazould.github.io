@@ -3,10 +3,6 @@ import profilePicShine from "./assets/profile-pic-shine.png";
 import "./index.css";
 import { useState } from "react";
 
-// const DescContent = ({content}) => {
-//   return
-// }
-
 const DescItem = ({ title, content, currIdx, viewIdx, setViewIdx }) => {
   const DescContent = content.map(({ name, date, link, desc }) => {
     return (
@@ -14,6 +10,13 @@ const DescItem = ({ title, content, currIdx, viewIdx, setViewIdx }) => {
         <div className="content-title">{name}</div>
         <div className="content-date">{date}</div>
         <div className="content-info">{desc}</div>
+        {link ? (
+          <a className="content-link" href={link} target="_blank">
+            view
+          </a>
+        ) : (
+          ""
+        )}
       </li>
     );
   });
@@ -28,7 +31,6 @@ const DescItem = ({ title, content, currIdx, viewIdx, setViewIdx }) => {
           : "desc-item"
       }
       onClick={() => {
-        console.log({ currIdx, viewIdx });
         setViewIdx(currIdx);
       }}
     >
@@ -66,18 +68,18 @@ function App() {
       content: [
         {
           name: "Teaching Assistant",
-          date: "Software Laboratory Center",
-          desc: "Feb 2019 - Mar 2022",
+          desc: "Software Laboratory Center",
+          date: "Feb 2019 - Mar 2022",
         },
         {
           name: "Frontend Engineer Intern",
-          date: "LINE Corp",
-          desc: "Des 2021 - Mar 2022",
+          desc: "LINE Corp",
+          date: "Des 2021 - Mar 2022",
         },
         {
           name: "Frontend Engineer",
-          date: "LINE Corp",
-          desc: "Mar 2022 - Jun 2022",
+          desc: "LINE Corp",
+          date: "Mar 2022 - Jun 2022",
         },
       ],
     },
@@ -96,25 +98,60 @@ function App() {
     {
       title: "ACHIEVEMENT",
       content: [
-        { name: "Best Assistant", date: "" },
-        { name: "Best Assistant", date: "" },
-        { name: "Best Assistant", date: "" },
+        { name: "Best Assistant", date: "2020" },
+        { name: "Best Assistant", date: "2021" },
+        { name: "Best Assistant", date: "2022" },
       ],
     },
     {
       title: "CERTIFICATE",
       content: [
-        { name: "Javascript", date: "", desc: "" },
+        {
+          name: "Javascript",
+          date: "",
+          link: "https://www.sololearn.com/certificates/CT-0WDNV5FM",
+          esc: "",
+        },
         { name: "React", date: "", desc: "" },
         { name: "Vue", date: "", desc: "" },
+        {
+          name: "SQL",
+          date: "",
+          link: "https://www.sololearn.com/certificates/CT-XFA5AZ0G",
+          desc: "",
+        },
+        {
+          name: "SQL",
+          date: "",
+          link: "https://www.sololearn.com/certificates/CT-XFA5AZ0G",
+          desc: "",
+        },
+        {
+          name: "SQL",
+          date: "",
+          link: "https://www.sololearn.com/certificates/CT-XFA5AZ0G",
+          desc: "",
+        },
       ],
     },
     {
       title: "PROJECTS",
       content: [
-        { name: "Anemone7", link: "", desc: "Todos app with vanilla js" },
-        { name: "Xtream Chaser", link: "", desc: "Game app landing page" },
-        { name: "Covidia", link: "", desc: "Covid19 web information" },
+        {
+          name: "Anemone7",
+          link: "http://anemone7.herokuapp.com/",
+          desc: "Todos app with vanilla js",
+        },
+        {
+          name: "Xtream Chaser",
+          link: "https://xtreme-chaser.herokuapp.com/",
+          desc: "Game app landing page",
+        },
+        {
+          name: "Covidia",
+          link: "https://covidia.herokuapp.com/",
+          desc: "Covid19 web information",
+        },
       ],
     },
   ];

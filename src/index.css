@@ -165,6 +165,14 @@ i {
 .desc-item .content{
   display: none;
   position: absolute;
+  opacity: 0;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  color: var(--secondary-color);
+  @apply ml-2 text-base p-2 z-10 hover:cursor-default bg-zinc-100 w-[230px] ;
+  top: 0;
+  bottom: 0;
+  font-family: 'Futura Lt BT', sans-serif;
   letter-spacing: normal;
 }
 
@@ -176,18 +184,6 @@ i {
 
 .desc-item.active .content{
   display: block;
-  opacity: 0;
-  writing-mode: horizontal-tb;
-  text-orientation: mixed;
-  width: 230px;
-
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  @apply ml-2 text-base p-2;
-  top: 0;
-
-  font-family: 'Futura Lt BT', sans-serif;
-
   animation-name: content-anim;
   animation-duration: .5s;
   animation-delay: .8s;
@@ -203,7 +199,8 @@ i {
 }
 
 .content .content-date{
-  @apply text-sm italic text-zinc-100;
+  font-family: 'Futura Lt BT', sans-serif;
+  @apply text-xs text-zinc-100;
 }
 
 .content .content-info{
