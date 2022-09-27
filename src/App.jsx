@@ -98,9 +98,21 @@ function App() {
     {
       title: "ACHIEVEMENT",
       content: [
-        { name: "Best Assistant", date: "2020" },
-        { name: "Best Assistant", date: "2021" },
-        { name: "Best Assistant", date: "2022" },
+        {
+          name: "Candidate of Best Performing Assistant",
+          date: "2019",
+          link: "https://drive.google.com/file/d/1O75jbGpawVD_JaBq4Tm27pU0TJrdiyfp/view?usp=sharing",
+        },
+        {
+          name: "Candidate of Best Performing Assistant",
+          date: "2021",
+          link: "https://drive.google.com/file/d/1T4Er4o0EU_8z0xZPB9xmPTQikbCAxu3C/view?usp=sharing",
+        },
+        {
+          name: "Diploma of Best Performing Assistant",
+          date: "2022",
+          link: "https://drive.google.com/file/d/1QdT1mN9fYtLkVetvH-tOP165h9B2_xs2/view?usp=sharing",
+        },
       ],
     },
     {
