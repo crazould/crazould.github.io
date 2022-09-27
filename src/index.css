@@ -13,31 +13,31 @@
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
   background-size: 4px 4px;
   user-select: none;
-  @apply min-h-screen bg-zinc-900 flex justify-center items-center py-16 overflow-x-hidden;
+  @apply min-h-screen bg-zinc-900 flex justify-center items-center pt-8 pb-16 overflow-x-hidden;
 }
 
 .wrapper {
-  @apply flex justify-center flex-wrap;
+  @apply flex justify-center flex-wrap md:w-[768px] max-w-[1200px] lg:w-full lg:justify-evenly;
 }
 
 .profile-intro {
-  @apply p-2 mb-3 text-blue-600;
+  @apply p-2 mb-8 text-blue-600;
 }
 
 .profile-intro-desc {
-  @apply flex flex-col items-center mb-3 md:mb-5 relative w-[280px] md:w-[400px];
+  @apply flex flex-col items-center mb-3 md:mb-5 relative w-[280px] md:w-[450px];
 }
 
 .profile-job-out {
-  @apply text-3xl -skew-y-6 md:text-[2.5rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden;
+  @apply text-3xl -skew-y-6 md:text-[3rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden md:leading-[42px];
 }
 
 .profile-pic-container {
-  @apply bg-blue-600 w-[280px] md:w-[400px] rounded-full relative overflow-hidden;
+  @apply bg-blue-600 w-[280px] md:w-[450px] rounded-full relative overflow-hidden;
 }
 
 .profile-job-in {
-  @apply text-3xl -skew-y-6 md:text-[2.5rem] w-[280px] md:w-[400px] text-center absolute z-10;
+  @apply text-3xl -skew-y-6 md:text-[3rem] w-[280px] md:w-[450px] text-center absolute z-10 md:leading-[42px];
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px #f4f4f5;
 }
@@ -59,7 +59,8 @@ i {
 }
 
 .profile-desc-wrapper {
-  @apply text-zinc-100 -skew-y-6;
+  @apply text-zinc-100 -skew-y-6 ;
+  overflow: hidden;
 }
 
 .profile-desc-header {
@@ -71,12 +72,11 @@ i {
 }
 
 .desc-item {
-  @apply bg-blue-600 m-1 p-1 py-2 text-2xl -skew-y-3 md:text-3xl hover:scale-110 hover:cursor-pointer duration-200 active:bg-blue-500 relative;
+  @apply bg-blue-600 m-1 p-1 py-2 md:p-2 text-2xl -skew-y-3 md:text-4xl hover:scale-110 hover:cursor-pointer duration-200 active:bg-blue-500 relative tracking-[-8px] md:tracking-[-15px];
   font-family: 'Futura XBlkCn BT', sans-serif;
   -webkit-text-stroke: .5px #18181b;
   writing-mode: vertical-lr;
   text-orientation: upright; 
-  letter-spacing: -8px;
 }
 
 @keyframes show-desc-5 {
@@ -169,7 +169,7 @@ i {
   writing-mode: horizontal-tb;
   text-orientation: mixed;
   color: var(--secondary-color);
-  @apply ml-2 text-base p-2 z-10 hover:cursor-default bg-zinc-100 w-[230px] ;
+  @apply ml-2 text-base p-2 z-10 hover:cursor-default bg-zinc-100 w-[250px] md:w-[322px] md:ml-4;
   top: 0;
   bottom: 0;
   font-family: 'Futura Lt BT', sans-serif;
@@ -196,19 +196,20 @@ i {
 
 .content .content-title{
   font-weight: 900;
+  @apply md:text-xl;
 }
 
 .content .content-date{
   font-family: 'Futura Lt BT', sans-serif;
-  @apply text-xs text-zinc-100;
+  @apply text-xs md:text-base text-zinc-100;
 }
 
 .content .content-link{
   font-family: 'Futura Lt BT', sans-serif;
-  @apply text-xs text-blue-600;
+  @apply text-xs md:text-base text-blue-600;
 }
 
 .content .content-info{
-  @apply text-sm;
+  @apply text-sm md:text-lg;
 }
 

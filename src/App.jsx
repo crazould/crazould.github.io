@@ -137,7 +137,7 @@ function App() {
           desc: "",
         },
         {
-          name: "JQuery",
+          name: "Jquery",
           date: "",
           link: "https://www.sololearn.com/certificates/CT-WTECHJCE",
           desc: "",
@@ -145,7 +145,7 @@ function App() {
         {
           name: "React + Redux",
           date: "",
-          link: "https://www.sololearn.com/certificates/CT-XFA5AZ0G",
+          link: "https://www.sololearn.com/certificates/CT-N2CUWSOX",
           desc: "",
         },
       ],
