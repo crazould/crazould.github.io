@@ -7,15 +7,8 @@ import profileDescTxt from "./data";
 
 function App() {
   const [isHoverPic, setHoverPic] = useState(false);
-  const profileJobTxt = "FRONTEND DEVELOPER ";
-
-  const totalProfileJobTxt = 10;
-  let ProfileJob = [];
-  for (let index = 0; index < totalProfileJobTxt; index++) {
-    ProfileJob = [...ProfileJob, profileJobTxt];
-  }
-
   const [viewIdx, setViewIdx] = useState(-1);
+  const ProfileJob = new Array(10).fill("FRONTEND DEVELOPER ");
 
   const DescItems = profileDescTxt.map(({ title, content }, index) => (
     <DescItem
