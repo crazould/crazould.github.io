@@ -9,11 +9,11 @@
 }
 
 .body {
-  font-family: 'Futura XBlkCnIt BT', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
   background-size: 4px 4px;
   user-select: none;
-  @apply min-h-screen bg-zinc-900 flex justify-center items-center pt-8 pb-16 overflow-x-hidden;
+  @apply min-h-screen bg-zinc-900 flex justify-center items-center pt-8 pb-16 overflow-x-hidden font-black;
 }
 
 .wrapper {
@@ -29,7 +29,7 @@
 }
 
 .profile-job-out {
-  @apply text-3xl -skew-y-6 md:text-[3rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden md:leading-[42px];
+  @apply text-3xl -skew-y-6 md:text-[2.45rem] text-center absolute h-[255px] md:h-[380px] overflow-hidden md:leading-[42px];
 }
 
 .profile-pic-container {
@@ -37,7 +37,7 @@
 }
 
 .profile-job-in {
-  @apply text-3xl -skew-y-6 md:text-[3rem] w-[280px] md:w-[450px] text-center absolute z-10 md:leading-[42px];
+  @apply text-3xl -skew-y-6 md:text-[2.45rem] w-[280px] md:w-[450px] text-center absolute z-10 md:leading-[42px];
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px #f4f4f5;
 }
@@ -73,7 +73,7 @@ i {
 
 .desc-item {
   @apply bg-blue-600 m-1 p-1 py-2 md:p-2 text-2xl -skew-y-3 md:text-4xl hover:scale-110 hover:cursor-pointer duration-200 active:bg-blue-500 relative tracking-[-8px] md:tracking-[-15px];
-  font-family: 'Futura XBlkCn BT', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-text-stroke: .5px #18181b;
   writing-mode: vertical-lr;
   text-orientation: upright; 
@@ -172,7 +172,7 @@ i {
   @apply ml-2 text-base p-2 z-10 hover:cursor-default bg-zinc-100 w-[250px] md:w-[322px] md:ml-4;
   top: 0;
   bottom: 0;
-  font-family: 'Futura Lt BT', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: normal;
 }
 
@@ -199,17 +199,18 @@ i {
   @apply md:text-xl;
 }
 
+
 .content .content-date{
-  font-family: 'Futura Lt BT', sans-serif;
-  @apply text-xs md:text-base text-zinc-100;
+  font-family: 'Poppins', sans-serif;
+  @apply text-xs md:text-sm font-normal;
 }
 
 .content .content-link{
-  font-family: 'Futura Lt BT', sans-serif;
-  @apply text-xs md:text-base text-blue-600;
+  font-family: 'Poppins', sans-serif;
+  @apply text-xs md:text-base text-blue-600 font-normal;
 }
 
 .content .content-info{
-  @apply text-sm md:text-lg;
+  @apply text-sm md:text-lg font-normal;
 }
 

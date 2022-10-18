@@ -1,7 +1,7 @@
 const DescItem = ({ title, content, currIdx, viewIdx, setViewIdx }) => {
-  const DescContent = content.map(({ name, date, link, desc }) => {
+  const DescContent = content.map(({ name, date, link, desc }, index) => {
     return (
-      <li className="content-item">
+      <li key={index} className="content-item">
         <div className="content-title">{name}</div>
         <div className="content-date">{date}</div>
         <div className="content-info">{desc}</div>

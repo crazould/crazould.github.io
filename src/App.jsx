@@ -10,16 +10,16 @@ function App() {
   const [viewIdx, setViewIdx] = useState(-1);
   const ProfileJob = new Array(10).fill("FRONTEND DEVELOPER ");
 
-  const DescItems = profileDescTxt.map(({ title, content }, index) => (
-    <DescItem
+  const DescItems = profileDescTxt.map(({ title, content }, index) => {
+    return (<DescItem
       title={title}
       content={content}
       key={index}
       currIdx={index}
       viewIdx={viewIdx}
       setViewIdx={setViewIdx}
-    />
-  ));
+    />)
+    });
 
   return (
     <div className="body">
