@@ -100,19 +100,24 @@
     title: "PROJECTS",
     content: [
       {
+        name: "Sinekoci",
+        link: "https://sinekoci.org/",
+        desc: "Community Blog website created with laravel & bootstrap",
+      },
+      {
+        name: "Alaisys",
+        link: "https://alaisys.com/home",
+        desc: "Company Website created with laravel & bootstrap",
+      },
+      {
         name: "Hamhams",
         link: "https://hamster-code.vercel.app/",
         desc: "Hamster pet shop created with next js & tailwind",
       },
       {
-        name: "Xtream Chaser",
-        link: "https://xtreme-chaser.herokuapp.com/",
-        desc: "Game app landing page",
-      },
-      {
-        name: "Covidia",
-        link: "https://covidia.herokuapp.com/",
-        desc: "Covid19 web information",
+        name: "Annuaire",
+        link: "https://crazould.github.io/annuaire/",
+        desc: "Phone number manager created with react & tailwind",
       },
     ],
   },
